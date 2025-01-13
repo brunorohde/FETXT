@@ -1,0 +1,74 @@
+#N canvas 598 198 940 638 12;
+#X obj 680 171 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 151 526 r \$0-p1;
+#X floatatom 151 547 5 0 0 0 - - - 0;
+#X floatatom 221 547 5 0 0 0 - - - 0;
+#X floatatom 291 547 5 0 0 0 - - - 0;
+#X obj 221 526 r \$0-p2;
+#X obj 291 526 r \$0-p3;
+#X floatatom 151 432 5 0 0 0 - - - 0;
+#X floatatom 221 432 5 0 0 0 - - - 0;
+#X floatatom 291 432 5 0 0 0 - - - 0;
+#X obj 151 452 s \$0-p1-;
+#X obj 221 452 s \$0-p2-;
+#X obj 291 452 s \$0-p3-;
+#X text 149 387 MANIPULAÇÃO DE DADOS NO PATCH - MÉTODOS "SET" E
+"GET";
+#X text 170 42 INTEFACES GRÁFICAS (GUI/GOP), f 18;
+#X text 374 42 DECLARAÇÃO DE PARÂMETROS;
+#X text 678 42 DECLARAÇÃO DA MEMÓRIA;
+#X text 677 137 GESTOR GRÁFICO DE PRESETS;
+#X symbolatom 402 432 10 0 0 0 - - - 0;
+#X symbolatom 402 547 10 0 0 0 - - - 0;
+#X symbolatom 485 432 10 0 0 0 - - - 0;
+#X symbolatom 485 547 10 0 0 0 - - - 0;
+#X obj 402 452 s \$0-p4-;
+#X obj 402 526 r \$0-p4;
+#X obj 485 452 s \$0-p5-;
+#X obj 605 452 s \$0-p6-;
+#X obj 485 526 r \$0-p5;
+#X text 74 220 SYMBOL;
+#X text 80 123 FLOAT;
+#X text 88 285 LIST;
+#X obj 151 82 cnv 15 170 235 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X floatatom 177 92 5 0 0 0 P1 \$0-p1_gui_set \$0-p1_gui 0;
+#X floatatom 177 123 5 0 0 0 P2 \$0-p2_gui_set \$0-p2_gui 0;
+#X floatatom 177 154 5 0 0 0 P3 \$0-p3_gui_set \$0-p3_gui 0;
+#X symbolatom 198 205 10 0 0 0 P4 \$0-p4_gui_set \$0-p4_gui 0;
+#X symbolatom 198 236 10 0 0 0 P5 \$0-p5_gui_set \$0-p5_gui 0;
+#X text 60 42 TIPOS DE DADOS, f 8;
+#X obj 680 92 memo \$0-memo 6 \$0-super;
+#X text 96 452 SET;
+#X text 96 526 GET;
+#X obj 229 125 hsl 80 15 0 127 0 0 \$0-p2_gui \$0-p2_gui_set empty
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 226 95 hradio 14 1 0 6 \$0-p1_gui \$0-p1_gui_set empty 0 -8
+0 10 #fcfcfc #000000 #000000 0;
+#X obj 226 156 nbx 5 15 -1e+37 1e+37 0 0 \$0-p3_gui \$0-p3_gui_set
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0 256;
+#X obj 377 205 param \$0-p4 \$0-memo 3 COMEMO;
+#X obj 377 236 param \$0-p5 \$0-memo 4 SISTEMA;
+#X obj 377 154 param \$0-p3 \$0-memo 2 100;
+#X obj 377 92 param \$0-p1 \$0-memo 0 1;
+#X obj 377 123 param \$0-p2 \$0-memo 1 10;
+#X obj 680 187 presets \$0-super;
+#X listbox 178 286 19 0 0 0 P6 \$0-p6_gui_set \$0-p6_gui 0;
+#X listbox 605 432 20 0 0 0 - - - 0;
+#X listbox 605 547 20 0 0 0 - - - 0;
+#X obj 605 526 r \$0-p6;
+#X obj 377 285 param \$0-p6 \$0-memo 5 uma lista aqui;
+#X connect 0 0 48 0;
+#X connect 1 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 7 0 10 0;
+#X connect 8 0 11 0;
+#X connect 9 0 12 0;
+#X connect 18 0 22 0;
+#X connect 20 0 24 0;
+#X connect 23 0 19 0;
+#X connect 26 0 21 0;
+#X connect 50 0 25 0;
+#X connect 52 0 51 0;

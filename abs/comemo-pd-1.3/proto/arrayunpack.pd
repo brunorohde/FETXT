@@ -1,0 +1,60 @@
+#N canvas 667 243 798 497 10;
+#X obj 50 160 list split 1;
+#X obj 50 218 list;
+#X obj 50 247 list split 1;
+#X obj 227 82 inlet ARRAY_LIST;
+#X obj 185 353 list;
+#X obj 50 82 inlet LIST;
+#X obj 185 372 list split 1;
+#X obj 185 391 t s;
+#X obj 69 430 array set;
+#X obj 63 276 list;
+#X msg 120 391 symbol;
+#X obj 346 208 outlet ARRAY_SIZE;
+#X text 460 208 TAMANHO DE CADA ARRAY DESEMPACOTADO;
+#X obj 50 334 t b l b;
+#X text 48 33 ** RECEBE LISTA GERADA POR [arraypack] E LISTA DOS ARRAYS
+PARA ONDE MANDAR OS CONTEÚDOS DESEMPACOTADOS, f 62;
+#X obj 206 130 list;
+#X obj 50 111 t l b b;
+#X obj 63 295 route bang;
+#X obj 50 189 t b f f;
+#X text 243 130 LISTA DE ARRAYS DE DESTINO;
+#X text 135 160 OBTÉM TAMANHO DE CADA ARRAY A SER DESEMPACOTADO;
+#X text 86 219 ARMAZENA RESTANTE DOS DADOS ATUAIS;
+#X text 135 247 SEPARA CONTEÚDO DO ARRAY ATUAL DOS DEMAIS DADOS RESTANTES
+;
+#X text 473 97 * TINHA DELAY DEPOIS DO [route bang] ENTRE CADA ARRAY
+DESEMPACOTADO \, REMOVI PRA TESTES E PARECE NÃO GERAR PROBLEMAS MESMO
+COM ARRAYS GRANDES - TESTAR MAIS, f 43;
+#X text 269 372 DIRECIONA CONTEÚDOS A CADA ARRAY DA LISTA DE DESTINOS
+;
+#X text 136 295 LOOP DOS DADOS RESTANTES ATÉ FINALIZAR BLOCOS DE DADOS
+NA LISTA ORIGINAL, f 38;
+#X text 135 430 ENVIA DADOS DO ARRAY ATUAL PARA O DESTINO CORRESPONDENTE
+;
+#X text 572 31 *** LICENÇA;
+#X connect 0 0 18 0;
+#X connect 0 1 1 1;
+#X connect 1 0 2 0;
+#X connect 2 0 13 0;
+#X connect 2 1 9 1;
+#X connect 3 0 15 1;
+#X connect 4 0 6 0;
+#X connect 5 0 16 0;
+#X connect 6 0 7 0;
+#X connect 6 1 4 1;
+#X connect 7 0 8 2;
+#X connect 9 0 17 0;
+#X connect 10 0 8 2;
+#X connect 13 0 9 0;
+#X connect 13 1 8 0;
+#X connect 13 2 4 0;
+#X connect 15 0 4 1;
+#X connect 16 0 0 0;
+#X connect 16 1 10 0;
+#X connect 16 2 15 0;
+#X connect 17 1 0 0;
+#X connect 18 0 1 0;
+#X connect 18 1 2 1;
+#X connect 18 2 11 0;

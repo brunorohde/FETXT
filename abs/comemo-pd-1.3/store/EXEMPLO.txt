@@ -1,0 +1,10 @@
+20 0 1 10 1 1 20 2 1 30 3 1 COMEMO 4 1 SISTEMA 5 3 uma lista qualquer
+;
+19 0 1 32 1 1 43 2 1 51 3 1 VAI 4 1 MEU_PIVA 5 2 outra lista;
+20 0 1 -123 1 1 -51 2 1 -119 3 1 TOTAL 4 1 MENTE 5 3 última de quebrada
+;
+;
+;
+;
+;
+;
